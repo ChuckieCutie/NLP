@@ -6,7 +6,8 @@ from time import sleep
 import pandas as pd
 
 # 1. Khai báo biến Service với đường dẫn đến chromedriver của bạn
-service = Service("D:/Downloads/chromedriver-win64/chromedriver.exe")
+service = Service("C:/Users/Admin/Documents/chromedriver-win64/chromedriver.exe")
+
 
 # 2. Khởi tạo browser
 browser = webdriver.Chrome(service=service)
@@ -23,7 +24,7 @@ txtPass.send_keys(Keys.ENTER)
 sleep(20)
 
 # 5. Mở bài viết
-browser.get("https://www.facebook.com/permalink.php?story_fbid=pfbid02XYeqppDhkWsCijvRjiY8zHNCScQNwjoZMupVcTkmKz5r51LdmjQpPtef3x63hBVfl&id=61558647683329&__cft__[0]=AZVU2GMxv_wbC7Cz6w7_Im0hbpth9NPo_Co5FV0Pvg37u0yAUDsUbk3T7H3M8cTtQek0EJOxLux9Gogie_f7ckw5_lh_YxpjVGsiHrddy-4cc0arq2LgFa6EM2BrzhYh6GF6RMNKmxD1dKOjLq6_4_7_oVxNkzoECoNC4pJBjiZWjsPvlWDRlRfL8Zq1BgZTR8Q5t1lgxf4IOm-kB6vkvLSEKQ7t21KqPuCutQ5rnJEy2E0KK09a7Mdg9ZowU2Iljjc&__tn__=%2CO%2CP-R")
+browser.get("https://www.facebook.com/permalink.php?story_fbid=pfbid0TwJKKza7BB4oYi27aGDK5HjvtpqpuHjZza1XJdEka7ePhqw3W58TMZoFUmsw7weWl&id=100086902014121&__cft__[0]=AZXFzpqyuI2z3FRqXAOskLDvlEK-FrAGMz1QNgjFl6xhs0JXz7hi5eGJB7rSsoTN3Py2MTZVMCQJU3vd5JC3fGm7hgemMM3KJVSr4GcA-EOAu0GoQlLQoz_wP_FdC_KT9pSBHxyKmkmFYbaPCFcDAKqY5MFtjp6FO3JET0qLNo2CTiqBMKTNgaG40UnFDuRruppIw99KGOdG3j9diz1aBWsysSVxa7A3V8OPiYA0h73A4aN8y4Pc2TfLuvuz3yrEfs8&__tn__=%2CO%2CP-R")
 sleep(20)  # Tăng thời gian chờ sau khi mở trang
 
 # Lưu trữ dữ liệu
@@ -70,12 +71,12 @@ def scroll_and_collect_comments():
 scroll_and_collect_comments()
 
 # Lưu bình luận vào file CSV
-csv_path = "D:/HUST/2024.1 NLP/crawler_facebook_comment-master/data.csv"
+csv_path = "C:/Users/Admin/Documents/XU LY NGON NGU TU NHIEN HUST/NLP-main/crawler_facebook_comment-master/data.csv"
 df = pd.DataFrame(comments_data, columns=["Comment"])
 try:
-    df.to_csv(csv_path, mode='a', index=False, encoding="utf-8-sig", header=False)
+    df.to_csv(csv_path, mode='a+', index=False, encoding="utf-8", header=False)
 except FileNotFoundError:
-    df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+    df.to_csv(csv_path, index=False, encoding="utf-8")
 
 sleep(5)
 # Đóng trình duyệt
