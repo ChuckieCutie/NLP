@@ -1,0 +1,11 @@
+[
+{
+    "sentences": "sự kiện xàm thế mà cứ đòi tổ chức",
+    "toxic": "1"
+},
+{
+    "sentences": "sự kiện như thế thì ai thèm đi",
+    "toxic": "1"
+}
+]
+// You add your own Vietnamese toxic sentences using same format above (REMEMBER TO DELETE THIS LINE)

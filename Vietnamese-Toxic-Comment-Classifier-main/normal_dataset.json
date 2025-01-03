@@ -1,0 +1,11 @@
+[
+{
+    "sentences": "tổ chức ý nghĩa phết",
+    "toxic": "0"
+},
+{
+    "sentences": "sự kiện có tổ chức lúc dịch bệnh như này không",
+    "toxic": "0"
+}
+]
+//You add your own Vietnamese normal sentences using same format above (REMEMBER TO DELETE THIS LINE)
